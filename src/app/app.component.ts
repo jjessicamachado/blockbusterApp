@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faTicketAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'BlockbusterApp';
+
+  ticket = faTicketAlt;
 
 }

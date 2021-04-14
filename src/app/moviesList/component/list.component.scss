@@ -1,4 +1,50 @@
-.movieBox {
-  display: flex;
-  margin: 2%;
+.moviesAccordion {
+  margin: 1%;
+  font-size: 1em;
+  .movieItem__header {
+    width: 100%;
+    button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      h5 {
+        font-weight: normal;
+        font-size: 1.1em;
+      }
+
+      .closed {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .movieItem__content {
+    display: flex;
+    .movie__poster {
+      max-height: 45vh;
+      object-fit: cover;
+    }
+
+    .movie__info {
+      margin-left: 2%;
+      .movie__info--name {
+        font-size: 1.5em;
+        display: block;
+      }
+
+      .movie__info--principalInfos {
+        color: #333;
+        margin: 1% 0;
+        span {
+          display: block;
+        }
+      }
+
+      .movie__info--description {
+        display: block;
+        color: #333;
+      }
+    }
+  }
 }

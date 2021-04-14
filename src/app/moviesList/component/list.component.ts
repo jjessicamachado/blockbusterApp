@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Movie } from '../movie.model';
 import moviesList from './../../../assets/filmes.json';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-list',
@@ -12,6 +12,8 @@ export class ListComponent implements OnInit {
   movies: any = moviesList;
 
   constructor() { }
+
+  faChevronUp = faChevronUp;
 
   ngOnInit() {
     this.registerMovies();

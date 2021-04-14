@@ -1,14 +1,36 @@
-<div *ngFor="let movie of movies" class="movieBox">
-    
-    {{movie.nome}}
+<div class="moviesAccordion">
+  <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+    <ngb-panel *ngFor="let movie of movies">
+      <ng-template ngbPanelHeader let-opened="opened">
+        <div class="movieItem__header">
+          <button ngbPanelToggle class="btn p-0">
+            <h5 class="m-0">{{ movie.nome }}</h5>
+            <fa-icon
+              [icon]="faChevronUp"
+              [ngClass]="opened ? '' : 'closed'"
+            ></fa-icon>
+          </button>
+        </div>
+      </ng-template>
 
-    {{movie.descricao}}
+      <ng-template ngbPanelContent>
+        <div class="movieItem__content">
+          <img [src]="movie.poster" class="movie__poster" />
 
-    {{movie.ano}}
+          <div class="movie__info">
+            <span class="movie__info--name"
+              >{{ movie.nome }} ({{ movie.ano }})</span
+            >
 
-    {{movie.diretor}}
+            <div class="movie__info--principalInfos">
+              <span>Gender: {{ movie.genero }}</span>
+              <span>Directors: {{ movie.diretor }}</span>
+            </div>
 
-    {{movie.genero}}
-
-    {{movie.poster}}
-    </div>
+            <span class="movie__info--description">{{ movie.descricao }}</span>
+          </div>
+        </div>
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+</div>

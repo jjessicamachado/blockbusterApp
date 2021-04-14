@@ -1,0 +1,15 @@
+.bg-blockbuster {
+  background-color: #203199;
+}
+
+.navbar-brand {
+  font-size: 1.5em;
+  color: #fbf584;
+  font-weight: bold;
+  &:hover {
+    color: #c7c373;
+  }
+  .ticketIcon {
+    font-size: 0.9em;
+  }
+}
